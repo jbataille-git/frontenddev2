@@ -12,6 +12,7 @@ let ikRock = () => {
 // Deel A
 let ikRock = () => console.log("Joe, ik rock de arrow functions");
 
+// Deel B
 const fivePlusSeven = function () {
   return 5 + 7;
 };
@@ -23,7 +24,6 @@ let fivePlusSeven3 = () => {
   return 5 + 7;
 };
 
-// Deel B
 // hier een impliciet return-statement
 let fivePlusSeven2 = () => 5 + 7;
 

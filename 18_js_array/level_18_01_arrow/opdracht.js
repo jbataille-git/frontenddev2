@@ -37,3 +37,5 @@ let addFive = c => c + 5;
 let createObject = () => ({greeting: "hoi"});
 
 createObject();
+
+// en hier een wijziging om met github te oefenen

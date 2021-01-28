@@ -30,11 +30,14 @@ console.log("Opdracht B: Aantal elementen in array: ", amountOfElementsInArray([
 //let firstCountry = (array) => array[0];
 let firstCountry = array => array[0];
 
+// kan ook met array.shift() of met array.slice(0, 1) slice retourneert een nieuwe array, wil je dat wel?
+
 //console.log("Opdracht C: Eerste element:", selectBelgiumFromBenelux(["Belgie", "Nederland", "Luxemburg"])); 
 console.log("Opdracht C: Eerste element:", firstCountry(["Belgie", "Nederland", "Luxemburg"]));
 
 // opdracht D het laatste element
 const lastElementInArray = array => array[array.length - 1];
+// kan ook met array.pop
 
 console.log("Opdracht D: Laatste element:", lastElementInArray(["Haas", "Cavia", "Kip", "Schildpad"]));
 

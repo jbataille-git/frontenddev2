@@ -124,7 +124,8 @@ console.log("Opdracht 1b name array:", superheroesNames2(superheroes));
 
 // Opdracht 2 lichte superhelden ----------------------------------------------
 const lightHeroes = superheroes.filter((hero) => {
-  return parseInt(hero.weight) < 190;
+   return parseInt(hero.weight) < 190;
+//   return hero.weight < 190;
 });
 
 console.log("Opdracht 2a Lichte superhelden:", lightHeroes);
@@ -144,9 +145,24 @@ const pound200HeroesNames = superheroes
 
   console.log("Opdracht 3a 200 pound superhelden namen: ", pound200HeroesNames);
 
+// uit de oplossing, in twee stappen
+// stap 1
+const heavySuperheroes = superheroes.filter( hero => {
+    return hero.weight == 200;
+});
+// of
+// const heavySuperheroes = superheroes.filter( hero => hero.weight == 200);
+
+// stap 2
+const heavySuperheroeNames = heavySuperheroes.map( hero => {
+    return hero.name;
+})
+
+
+
 // Opdracht 4 array met de first appearance comic -----------------------------
 // eerst in twee stappen
-const firstAppearances = superheroes.map( (h) => h.first_appearance);
+const firstAppearances = superheroes.map( h => h.first_appearance);
 
 console.log("Opdracht 4a first-appearance-comics:", firstAppearances);
 
@@ -175,6 +191,28 @@ const sumWeight = superheroes
 }, 0);
 
 console.log("Opdracht 6a som gewicht:", sumWeight);
+
+// de oplossing zegt
+// Deze is gemaakt voor de pro's met een implicit return statement (oftwel een one-liner)
+// EN een een in chain:
+const addedWeightDC = DCComics.map(hero => {
+  return hero.weight !== "unknown" ? parseInt(hero.weight, 10) : 0;
+}).reduce((weight1, weight2) => weight1 + weight2);
+
+console.log("TotalWeight of DC Comics - supersmall version:", addedWeightDC);
+
+//De bovenstaande oplossing kun je ook wat uitgebreider opschrijven:
+const heroWeights = DCComics.map(hero => {
+  if (hero.weight !== "unknown") {
+    // de Hero weights zijn in de data opgenamen als strings, e.g: '40'
+    // Deze moet je even parsen naar een integer, zodat je er mee kunt rekenen.
+    return parseInt(hero.weight, 10);
+  } else {
+    // wanneer het gewicht dus "unknown" is, dan wil je het gewicht van 0 optellen.
+    return 0;
+  }
+});
+
 
 // Opdracht 7 gewicht optellen van Marvel Comics -------------------------------
 const sumWeight2 = superheroes
@@ -217,7 +255,27 @@ console.log("Opdracht 8b:", heaviestSuperhero);
 //   return Math.max(a, b);
 // });
 
+// de oplossing zegt:
+// First cast all values to a number or 0 if unknown
+const allHeroes = heroes.map(hero => {
+  const weight = hero.weight !== "unknown" ? parseInt(hero.weight) : 0;
+  hero.weight = weight;
+  return hero;
+});
+// next, use reduce to find the largest value
+const heaviestHero = allHeroes.reduce(
+  (currentHeaviestHero, currentHero) => {
+    if (currentHero.weight > currentHeaviestHero.weight) {
+      return currentHero;
+    } else {
+      return currentHeaviestHero;
+    }
+  },
+  allHeroes[0]
+  // met deze laatste waarde geef je aan wat de initiele waarde moet zijn van de functie
+);
 
+console.log("Heaviest her0000o:", heaviestHero);
 
 
 

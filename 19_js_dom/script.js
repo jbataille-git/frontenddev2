@@ -36,11 +36,12 @@ document.getElementById("remove-first-item-button").addEventListener("click", re
 
 // ----------------------------------------------------------------------------
 // deel 3
-const removeAllItems = function() {
+// const removeAllItems = function() {
+const removeAllItems = function(text) {
   // we weten al in welke ul we moeten zijn
   // dit is de grove manier
   //spottedAnimals.innerHTML = "";
-
+  console.log(text);
   // en de nette manier
   // currentSpottedAnimals = document.querySelectorAll("#spotted-animals-list li");
   // console.log('type: ', typeof(currentSpottedAnimals)); //object
@@ -81,4 +82,5 @@ const removeAllItems = function() {
   //   }
 }
 
-document.getElementById("remove-all-button").addEventListener("click", removeAllItems);
+//document.getElementById("remove-all-button").addEventListener("click", removeAllItems);
+document.getElementById("remove-all-button").addEventListener("click", removeAllItems("test"));

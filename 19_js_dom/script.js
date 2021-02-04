@@ -36,7 +36,7 @@ document.getElementById("remove-first-item-button").addEventListener("click", re
 
 // ----------------------------------------------------------------------------
 // deel 3
-// const removeAllItems = function() {
+//const removeAllItems = function() {
 const removeAllItems = function(text) {
   // we weten al in welke ul we moeten zijn
   // dit is de grove manier
@@ -82,5 +82,9 @@ const removeAllItems = function(text) {
   //   }
 }
 
-//document.getElementById("remove-all-button").addEventListener("click", removeAllItems);
-document.getElementById("remove-all-button").addEventListener("click", removeAllItems("test"));
+// document.getElementById("remove-all-button").addEventListener("click", removeAllItems);
+// onderstaat doet iets raars: het voert de functie uit bij laden van de pagina
+// het bevat namelijk een functieaanroep, leerde ik
+// document.getElementById("remove-all-button").addEventListener("click", removeAllItems("test"));
+// je moet het dan zo doen, anoniem en inline, dan gaat het goed:
+document.getElementById("remove-all-button").addEventListener("click", () => removeAllItems("test"));

@@ -19,7 +19,7 @@ const fivePlusSeven = function () {
 
 fivePlusSeven();
 
-// als de functie-body niet op q regel kan, heb je een return statement nodig
+// als de functie-body niet op 1 regel kan, heb je een return statement nodig
 let fivePlusSeven3 = () => {
   return 5 + 7;
 };

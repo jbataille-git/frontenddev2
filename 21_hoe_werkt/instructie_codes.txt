@@ -1,0 +1,67 @@
+frontend point of view
+
+url: bevat http, de manier om de resource te benaderen
+     en de locatie
+     http://thinkzarahatke.com/author/amty.html
+
+urn: pad naar de resource, tot het eind
+    thinkzarahatke.com/author/amty.html#posts
+
+uri: dit samen
+    http://thinkzarahatke.com/author/amty.html#posts
+
+
+// RESPONSE CODES
+http status codes
+clients and servers
+
+100 informational
+100 continue
+101 switching protocol
+103 checkpoint
+
+200 succes
+201 created
+202 accepted
+205 reset content
+206 partial content
+
+300 redirection
+302 found
+304 not modified
+305 use proxy
+307 temporary redirect
+
+400 client errors
+400 bad request
+401 unauthorized
+403 forbidden
+404 not found
+408 request timeout
+
+500 server error
+500 internal server error
+502 bad gateway
+503 service unavailable
+504 gateway timeout
+
+// BELANGRIJKSTE
+200 succes
+
+// redirection
+301 permanent redirect, if you are permanently replacing one URL for another
+302 temporary redirect, meestal een slecht idee
+304 not modified: opgevraagde bestand is niet gewijzigd dus haal 't uit je cache
+
+// client
+401 unauthorized: login is niet geldig
+403 forbidden: server weet wie je is en houdt je tegen
+404 not found: maak een aparte 404 pagina als je zin hebt
+410 gone: no longer available, is in the nerd folklore area
+429 too many requests
+
+// server
+500 internal server error, fix it asap, server doesn't exactly know what's goin on
+503 service unavailable,  expected error
+504 gateway timeout: server vroeg iets en kreeg het niet op tijd
+

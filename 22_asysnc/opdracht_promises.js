@@ -1,4 +1,3 @@
-
 // hier kwam ik nog wel uit
 // const testNum = (numberToTest) => {
 //   return new Promise((resolve, reject) => {

@@ -3,7 +3,7 @@
 // In principe is er één proces dat de JS uitvoert
 // dus de code wordt van boven naar beneden uitgevoerd.
 
-// Er is wel hosting
+// Er is wel hoisting
 // en in de eerste ronde worden declaraties uitgevoerd,
 // in de tweede ronde worden de waarden aan de gedeclareerde variabelen toegekend
 // in de derde ronde wordt er uitgevoerd
@@ -79,6 +79,7 @@ setTimeout(function () {
 }, 0);
 // hij doet eerste alle synchrone dingen
 // daarna alle asynychrone, in de volgorde waarin ze in het script staan
+// als daar alle timeout values op 0 staan, tenminsten
 
 // promises
 let p = new Promise(function (resolve, reject) {

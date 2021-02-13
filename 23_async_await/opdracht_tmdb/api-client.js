@@ -19,8 +19,9 @@ async function getData() {
     // console.log('wat is result: ' + typeof(result)) // object
 
     const resultJson = await result.json();
-    console.log("Result converted to JSON");
-    // console.log("wat is resultJson: " + typeof(resultJson)); // object
+    console.log("Result to JSON");
+    // console.log("wat is resultJson: " + typeof resultJson); // object
+    return resultJson;
 
   } catch (err) {
     console.log(err);

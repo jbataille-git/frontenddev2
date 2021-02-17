@@ -3801,4 +3801,5 @@ const randomPersonData = [
   },
 ];
 
-console.log(randomPersonData.length);
+// console.log("Aantal personen: " + randomPersonData.length);
+// console.log( randomPersonData[0].name)

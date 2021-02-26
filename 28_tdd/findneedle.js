@@ -1,7 +1,7 @@
-const findNeedle = function (words) {
+const findNeedle = function (words, searchWord)  {
   
-  const index = words.indexOf("needle", 0);
-  console.log('index: ' + index);
+  const index = words.indexOf(searchWord, 0);
+  // console.log('index: ' + index);
   return index;
 
 };

@@ -1,26 +1,15 @@
-// const isShorterThan9 = (password) => password.length;
-// const isShorterThan9 = (password) => {
-//     return password !== null && password.length < 9;
-// };
-
-// const isNotNull = (password) => password !== null;
-// exports.isShorterThan9 = isShorterThan9;
-// exports.isNotNull      = isNotNull;
-
+// Utility functions
 const isNotNull = (str) => str !== null;
 
-const hasRightLength = (str) => (str !== null && str.length < 9);
+const hasRightLength = (str) => isNotNull(str) && str.length <= 8;
 
-const hasUpperCaseCharacter = (str) => ( str !== null && str !== str.toLowerCase());
+const hasUpperCaseCharacter = (str) =>
+  isNotNull(str) && str.toLowerCase() !== str;
 
-const hasLowerCaseCharacter = (str) => ( str !== null && str !== str.toUpperCase());
+const hasLowerCaseCharacter = (str) =>
+  isNotNull(str) && str.toUpperCase() !== str;
 
-const hasDigit = (str) => {
-  const regex = new RegExp(/\d/);
-  return regex.test(str);
-};
-
-// const hasDigit = (str) => /\d/.test(str);
+const hasDigit = (str) => /\d/.test(str);
 
 const minimumConditionsReached = (conditions) => {
   // conditions is an array of booleans
@@ -39,6 +28,7 @@ const verifyPassword = (password) => {
   ];
   const result =
     minimumConditionsReached(conditions) && hasLowerCaseCharacter(password);
+
   return result;
 };
 
@@ -51,4 +41,3 @@ module.exports = {
   hasDigit,
   minimumConditionsReached,
 };
-

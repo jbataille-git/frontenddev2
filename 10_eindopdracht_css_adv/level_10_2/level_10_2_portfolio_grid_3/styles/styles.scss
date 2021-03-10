@@ -1,0 +1,80 @@
+body {
+    background-color: #c3cfe2;
+}
+
+.grid-container {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+    padding: 30px;
+    max-width: 100%;
+}
+
+.card {
+    max-height: 600px;
+    max-width: 450px;
+    border-radius: 20px;
+    transition-property: background;
+    transition-timing-function: ease-in-out;
+    transition-duration: 300ms;
+    
+    &__button {
+        position: relative;
+        left: 170px;       /* is alleen goed als de card op zijn maximale formaat is, dan staat 'ie in het midden */
+        top: 300px;       
+        opacity: 0;
+        border-radius: 5px;
+        height: 2em;
+        font-weight: bold;
+        box-shadow: 2px 2px 2px gray;
+    }
+
+    &__image {
+        width: 100%;
+        max-width: 450px;
+        border-radius: 20px;
+        opacity: 1;
+        transition-property: opacity;
+        transition-timing-function: ease-in-out;
+        transition-duration: 300ms;
+    
+        &:hover {
+            opacity: 0;
+        }
+    }
+
+    &:hover {
+        background-color: rgb(71, 71, 71);
+    }
+
+    &:hover .card__button {
+        opacity: 1;
+    }
+}
+
+/* ------------------------------------------------------------------------------------*/
+/* media-queries
+/* ------------------------------------------------------------------------------------*/
+
+/* ondergrens van tablets */
+@media screen and (min-width: 768px) {
+  .grid-container {
+      /* grid-template-columns: auto auto; */
+      grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ondergrens van desktops */
+@media screen and (min-width: 1024px) {
+  .grid-container {
+      grid-template-columns: repeat( 3, 1fr);
+  }
+}
+/*
+@media screen and (min-width: 1600px) {
+  .grid-container {
+      grid-template-columns: repeat(4, 1fr);
+  }
+}
+*/

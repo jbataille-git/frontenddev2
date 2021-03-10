@@ -24,14 +24,22 @@ const getYieldForCrop = (input, factors) => input.numCrops * getYieldForPlant(in
 
 const getTotalYield = (crops, factors) => {
 
-  const arrayFromCrops = Array.from(crops);
-  let totalYield = 0;
+  // const arrayFromCrops = Array.from(crops);
+  // let totalYield = 0;
 
-  for ( i = 0; i < arrayFromCrops.length; i++) {
-    totalYield += getYieldForCrop(arrayFromCrops[i], factors);
-  };
-  return totalYield;
+  // for ( i = 0; i < arrayFromCrops.length; i++) {
+  //   totalYield += getYieldForCrop(arrayFromCrops[i], factors);
+  // };
+  // return totalYield;
 
+  crops.crops.forEach( plant => {
+    console.log( plant);
+  })
+
+  let currentTotal = 0;
+  return crops.crops.reduce((currentTotal, item) => {
+    return currentTotal + getYieldForCrop( item, factors)
+  }, 0)
 }
 
 const getCostForPlant = plant => plant.cost;

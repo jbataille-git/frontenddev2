@@ -1,0 +1,181 @@
+@charset "UTF-8";
+/*
+@font-face {
+     font-family: "Font Awesome 5 Free";
+     src: url("./webfonts/fa-solid-900.woff");
+}
+*/
+/*
+1.
+ik kom er niet uit met de unicode-waarden van het Awesome font
+de waarden in de opdracht werken niet goed dus heb ik wat anders ingevuld,
+staat hier:
+
+https://fontawesome.com/cheatsheet
+
+Ik heb het ook geprobeerd met lokaal opslaan van het font (zie hierboven)
+maar dat krijg ik niet aan de gang
+
+2.
+Het moet met een transition, met een animatie met keyframes krijg je de terugweg niet goed.
+Mee eens?
+Heb het even met een animation met keyframes geprobeerd, zie onder, maar vond dat het niet goed werkte.
+
+3.
+Om te oefenen heb ik de Twitter-button met een image gedaan.
+Dat kun je ook in de ::before zetten.
+Maar de tekst erachter zakt dan naar beneden, die lijnt uit met onderkant van het plaatje.
+Heb ik een beetje opgelost door het plaatje kleiner te maken maar dat is niet genoeg.
+Is er een andere manier?
+
+4. Ook om te oefenen heb ik de Github button anders gedaan, met twee span's in de button
+
+5. ik heb buttons gemaakt maar dat hoeft eigenlijk niet, denk ik.
+   Omdat er geen form-action aan vast hoeft te zitten, een <a> doet al het werk
+   Het zou dus ook met een <div> kunnen, denk ik.
+   Niet geprobeerd omdat ik dan weer een aantal classes moet bijmaken.
+*/
+body {
+  background-color: lightgray;
+}
+
+main {
+  height: 20px;
+}
+
+footer {
+  width: 100%;
+  height: 500px;
+  background-color: #c3cfe2;
+  display: flex;
+  justify-content: flex-end;
+  /* justify-content: flex-start; */
+}
+
+a {
+  text-decoration: underline;
+  color: white;
+}
+
+.button-container {
+  /* width: 50px; */
+  padding-top: 100px;
+}
+
+.button {
+  color: white;
+  font-weight: bold;
+  display: block;
+  width: 250px;
+  height: 50px;
+  border: none;
+  padding: 0px;
+  position: relative;
+  text-align: left;
+  left: 200px;
+  transition-property: left;
+  transition-timing-function: ease-in-out;
+  transition-duration: 200ms;
+}
+.button:hover {
+  left: 0px;
+}
+
+/* algemene properties voor awesome font */
+.button::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  padding: 0px 25px 0px 20px;
+  /* -webkit-font-smoothing: antialiased; hier klaagt de Firefox-inspector over*/
+}
+
+.button__blog {
+  background-color: #e17b77;
+}
+.button__blog::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "";
+}
+
+.button__twitter {
+  /* background-color: #00aced; */
+  background-color: #50abf1;
+}
+
+.img-twitter {
+  display: inline;
+  width: 30px;
+  height: 30px;
+}
+
+/*
+.button__twitter::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f099";
+    content: "\f6bb";
+}
+*/
+.button__twitter::before {
+  content: url("twitter_small.png");
+  padding-left: 15px;
+}
+
+.button__linkedin {
+  background-color: #007bb6;
+}
+
+.button__linkedin::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  /* content: "\f0e1"; */
+  content: "";
+}
+
+.button__facebook {
+  background-color: #3b5998;
+}
+
+.button__facebook::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  /* content: "\f39e"; */
+  content: "";
+}
+
+.button__github {
+  background-color: #333;
+}
+
+.button__github__logo::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "";
+  padding-left: 20px;
+}
+
+.button__github__text {
+  padding-left: 20px;
+}
+
+/*
+.button__github::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f0d1";
+}
+*/
+/* 
+@keyframes slide-left {
+    from {
+       transform: translate(0px, 0px);
+    }
+    to {
+       transform: translate(-150px, 0px);
+    }
+}
+*/
+/*# sourceMappingURL=styles.css.map */

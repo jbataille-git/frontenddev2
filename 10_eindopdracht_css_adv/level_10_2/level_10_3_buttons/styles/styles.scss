@@ -1,0 +1,91 @@
+body {
+  background-color: lightgray;
+}
+
+main {
+    width: 100%;
+    height: 500px;
+    background-color: #c3cfe2;
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: underline;
+    color: white;
+}
+
+.button-container {
+    width: 250px;
+    padding-top: 100px;
+}
+
+.button {
+    color: white;
+    font-weight: bold;
+    // display: block;
+    display: flex;          // om png ::before en link-text verticaal gecentreerd te krijgen
+    justify-content: left;  // idem
+    align-items: center;    // idem
+    width: 250px;
+    height: 50px;
+    border: none;
+    padding: 0px;
+    position: relative;
+    left: 200px;
+    text-align: left;
+    padding-left: 10px;
+    transition-property: left;
+    transition-timing-function: ease-in-out;
+    transition-duration: 300ms;
+
+    &:hover {
+        left: 0px;
+    }
+
+    &__blog {
+        background-color: #73B1C6;
+    
+        &::before {
+            content: url("../imgs/wordpress_small.png");
+        }
+    }
+    
+    &__twitter {
+        background-color: #50abf1;
+
+        &::before {
+            content: url("../imgs/twitter_small.png");
+        }
+    }
+
+    &__linkedin {
+        background-color: #1266BD;
+
+        &::before {
+            content: url("../imgs/linkedin_small.png");
+        }
+    }
+
+    &__facebook  {
+        background-color: #4569AF;
+
+        &::before {
+            content: url("../imgs/facebook_small.png");
+        }
+    }
+
+    &__github {
+        background-color: #000000;
+
+        &::before {
+            content: url("../imgs/github_small.png");
+        }
+    }
+}
+
+.link-text {
+    padding-left: 20px;
+}
+

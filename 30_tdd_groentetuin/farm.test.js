@@ -1,6 +1,6 @@
 // t/m requirement 4
 // jest aanroepen: ..\27_test\node_modules\.bin\jest --watch farm
-
+// ..\27_test\node_modules\.bin\jest --watch D:/data/winc/30_tdd_groentetuin/farm.test.js
 const { 
   getYieldForPlant,
   getYieldForCrop, 
@@ -153,11 +153,11 @@ describe("getYieldForCrop", () => {
 
 // ----------------------------------------------------------------------------
 describe("getTotalYield", () => {
-  test("Calculate total yield with multiple crops and medium sun", () => {
+  test.only("Calculate total yield with multiple crops and medium sun", () => {
     environmentFactors.sun = "medium";
     environmentFactors.locusts = "none";
-    expect(getTotalYield(crops, environmentFactors)).toBe(23);
-    // expect(getTotalYield({ crops })).toBe(23);
+    // expect(getTotalYield(crops, environmentFactors)).toBe(23);
+    expect(getTotalYield({ crops }, environmentFactors)).toBe(23);
   });
 
   test("Calculate total yield with 0 amount", () => {

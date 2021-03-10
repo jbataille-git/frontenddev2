@@ -1,0 +1,25 @@
+.mario {
+  position: absolute;
+  top: -40px;
+  left: 0px;
+  animation-name: drive;
+  animation-duration: 3s;
+
+  animation-fill-mode: none; /* keer terug naar oorspronkelijke staat */
+  animation-fill-mode: forwards; /* blijf staan op eindstand van animatie */
+  animation-fill-mode: backwards; /* terug naar beginwaarden */
+  animation-fill-mode: both; /* allebei */
+  /* animation-delay: 2s; vertraging voordat de animatie begint */
+
+  animation-iteration-count: 3;
+  animation-iteration-count: infinite;
+}
+
+@keyframes drive {
+  from {
+    transform: translateX(-200);
+  }
+  to {
+    transform: translateX(1000px);
+  }
+}

@@ -1,0 +1,10 @@
+Om je pagina zo snel mogelijk te laten werken is het (op dit moment)
+de best practice om je JavaScript in de head van je HTML te laden
+met het defer attribuut.
+
+Het is dus handig (en "best practice") om de JavaScript die iets doet met de DOM pas te draaien als dat event voorbij komt.
+
+document.addEventListener('DOMContentLoaded', function(event) {
+  //the event occurred
+})
+

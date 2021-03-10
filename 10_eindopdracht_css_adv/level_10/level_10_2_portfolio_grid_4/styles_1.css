@@ -1,0 +1,69 @@
+/*
+1.  In oplossing 1 had ik display: block nodig voor de foto, om die in het midden te krijgen
+     samen met margin-left en margin-right op auto
+    Hier hoeft dat ineens niet meer, de foto gaat naar het midden
+     als ik text-align van het omsluitende blok op center zet.
+    Waarom is dat zo?
+*/
+body {
+  background-color: #c3cfe2;
+  margin: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.card__main {
+  height: 375px;
+  width: 425px;
+  background-color: white;
+  margin: 20px 20px 0px 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 5px 10px 10px gray;
+}
+.card__main__text {
+  padding: 40px 40px 20px 40px;
+  line-height: 1.8em;
+  font-size: 1.3em;
+}
+
+.shift_up_container {
+  position: relative;
+  top: -85px;
+}
+
+.card__footer {
+  background-color: #686de0;
+  width: 425px;
+  height: 200px;
+  margin: 0px 20px 0px 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  text-align: center;
+  box-shadow: 5px 10px 10px gray;
+}
+.card__footer__image {
+  width: 160px;
+  height: 160px;
+  border: 6px solid white;
+  border-radius: 85px;
+}
+.card__footer__name {
+  text-transform: uppercase;
+  color: white;
+  font-weight: 500;
+  font-size: 1.4em;
+  padding: 20px 0px 20px 0px;
+}
+
+a {
+  text-decoration: none;
+  color: #a1a7f1;
+  font-size: 1.3em;
+  transition-property: color;
+  transition-duration: 300ms;
+}
+
+a:hover {
+  color: white;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,48 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    color: darkblue;
+    background-color: lightgray;
+}
+.black-border {
+  border-style: outset;
+  border-width: 10px;
+  border-color: blue;
+}
+.coupon {
+	width: 250px;
+    padding: 10px;
+    margin: 10px;
+	text-align: center;
+    border: 3px dashed #ccc; 
+    background-color: white;
+}
+div.couponrand {
+    width: 296px;
+    border: 1px solid #b12121;
+    background-color: white;
+}
+#green-background {
+  background-color: lightgreen;
+}
+h2 {
+    color: red;
+    background-color: lightblue;
+}
+h3 {
+    color: black;
+    font-family: monospace;
+    font-size: 0.875em;
+}
+.schuin {
+    color: #222222;
+    font-style: italic;
+}
+img {
+    border: 12px dashed #1b1a19;
+    background-color: white;
+}
+figcaption {
+    color: black;
+    font-size: small;
+    width: 200px;
+}

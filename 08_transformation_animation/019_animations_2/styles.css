@@ -1,0 +1,25 @@
+.batman {
+  position: relative;
+  top: 0;
+  left: 0;
+  animation-name: cover-joker;
+  animation-duration: 2000ms;
+  animation-fill-mode: both;
+  animation-delay: 2s;
+  /* animation-iteration-count: infinite; */
+}
+
+.joker {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+@keyframes cover-joker {
+    from {
+       transform: translate(0px, 0px);
+    }
+    to {
+       transform: translate(520px, 240px) scale(5) rotateZ(-90deg);
+    }
+}

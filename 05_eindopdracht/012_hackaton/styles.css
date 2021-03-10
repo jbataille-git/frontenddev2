@@ -1,0 +1,158 @@
+html {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+}
+
+section {
+    padding: 20px;
+}
+
+a {
+  font-family: 'Roboto', sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 100%;
+  /* grid-template-rows: 180px auto 200px; */
+  grid-template-rows: auto auto 200px;
+  grid-gap: 5px;
+  height: 100%; /*   maakt 'm alleen responsive als body en html ook height 100% hebben*/
+ }
+
+.site-header {
+  background-color: #51a6f8;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+ }
+
+.site-main {
+  background-color: #6ebf40;
+  color: white;
+  padding-left: 20px;
+}
+
+.site-footer {
+  background-color: #0163be;
+  color: white;
+  padding-left: 20px;
+}
+
+/* hoe krijg ik de afbeeldingen gecentreerd als ze op mobile onder de tekst staan? */
+.spullen {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    color: black;
+    padding: 10px;
+}
+
+.das-aside {
+    background-color: #6ebf40;
+    color: white;
+    text-align: center;
+}
+
+.iframe-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.tekstlabel {
+  display: inline-block;
+  width: 200px;
+  padding-left: 10px;
+}
+
+
+/* een flexbox binnen een grid, dat moet kunnen */
+/* dit doet ongeveer wat ik wil dat het doet, maar op m'n mobiel ziet het er niet uit */
+/* de nav elementen zijn veel te smal. Hoe los ik dat op?  */
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* justify-content: flex-start safe; */
+    justify-content: center;
+    /* align-items: flex-end; doet niks, waarom? */
+    /* align-content: center; */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.nav-container > div {
+    width: 120px;
+    /* width: 100%; */
+    border: 5px outset #0163be;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    /* flex-basis: auto; */
+    flex-grow: 1;
+    /* flex: 0 1 auto; */
+}
+
+.nav-container a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-container div:hover {
+    background-color: white;
+    color: #0163be;
+    border-style: inset;
+}
+
+
+/* anders wordt de tekst onzichtbaar - wit - als je buiten de tekst op de div hovert */
+.nav-container div:hover a{
+    color: #0163be;
+}
+
+/* ------------------------------------------------------------------------------------*/
+/* media-queries                                                                       */
+/* ------------------------------------------------------------------------------------*/
+
+@media screen and (min-width: 768px) {
+  .spullen {
+    flex-wrap: nowrap;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: 200px auto;
+    grid-template-rows: auto 200px;
+  }
+
+  .site-header {
+    grid-row: 1 / -1;
+  }
+
+  .nav-container {
+      flex-direction: column;
+  }
+
+  /* .nav-container > div {
+      width: 120px;
+  } */
+}

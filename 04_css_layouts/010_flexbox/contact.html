@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contactformulier</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>De wereld van Joost Bataille in zijn volle pracht met alles erop en eraan</h1>
+        <nav>
+            <ul class="navigatie-ul">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Meer</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="recept_indienen.html">Recept indienen</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form name="contactformulier" method="POST" data-netlify="true">
+          <p>
+            <label for="naam" class="tekstlabel">Naam:</label>
+            <input type="text" id="naam" name="naam">
+          </p>
+          <p>
+          <label for="emailadres" class="tekstlabel">Emailadres:</label>
+          <input type="email" id="emailadres" name="emailadres"/>
+          </p>
+          <p>
+          <label for="tekstgebied" class="tekstlabel">Tekst:</label>
+          <textarea id="tekstgebied" rows="10" cols="50" name="teksgebied">
+            Hier kun je vrije tekst invoeren
+          </textarea>
+          </p>
+          <p>
+              <label for="submitknop" class="tekstlabel">Indienen:</label>
+              <button type="submit" value="Submit" id="submitknop" name="submitknop">Indienen</button>
+          </p>
+        </form>
+    </main>
+    <footer>
+        Zoeken met <a href="http://www.google.nl">Google</a>
+    </footer>
+</body>
+
+</html>

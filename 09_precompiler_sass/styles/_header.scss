@@ -1,0 +1,18 @@
+// tweede scss bestand met geneste button properties
+header {
+    background: lightblue;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    button {
+        background: $primary-button;
+        &:hover {
+            background: red;
+        }
+        &::after {
+            content: "Helloooo";
+        }
+    }
+
+}

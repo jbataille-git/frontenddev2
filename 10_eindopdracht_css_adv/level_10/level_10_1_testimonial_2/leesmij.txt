@@ -1,0 +1,16 @@
+versie 2
+
+strakker dan versie 1, minder code
+
+heb twee divs gemaakt, voor bovenste helft en onderste helft
+en die schuif ik tegen elkaar aan
+
+is beetje moeilijk
+
+en dan een shift-up-container gemaakt om foto en de teksten eronder op de goede plek te krijgen
+
+werkt en weinig code maar het is wat getruukt
+
+heb geen elegante oplossing kunnen vinden, ben benieuwd hoe het nog meer zou kunnen
+
+lang over gedaan, meer dan halve dag en veel van geleerd

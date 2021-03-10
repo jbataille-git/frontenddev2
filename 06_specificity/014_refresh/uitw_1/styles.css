@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* grid-gap: 20px; */
+}
+
+.user-action {
+    width: 580px;
+    border-color: #dddddd;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 2px #eeeeee;
+    margin: 20px;                        /*  hier nog verder aan werken */
+}
+
+.user-action-header {
+    display: grid;
+    grid-template-columns: auto 100px;
+    grid-template-rows: 2fr;
+    /* border: 1px solid green; */
+}
+
+.member-name {
+    grid-column: 1 / 2;
+    color: #191919;
+    /* border: 1px solid yellow; */
+    margin: 20px 20px 5px 30px;
+}
+
+.member-status {
+    grid-column: 1 / 2 ;
+    color: #b7b7b7;
+    /* border: 1px solid blue; */
+    margin: 0px 20px 10px 30px;
+    font-size: 1.3em;
+    font-weight: lighter;
+}
+
+.user-portrait {
+    grid-column: 2 / 3;
+    grid-row: 1 / span 2;
+}
+
+.user-figure {
+    padding-top: 20px;
+}
+.user-action-text {
+    font-size: 1.4em;
+    color: #4c4c4c;
+    /* border: 1px solid red; */
+    margin: 40px 30px;
+}
+
+.group {
+    font-weight: bold;
+}
+.action-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-top: 2px solid #eeeeee;
+}
+
+.action-button-container button {
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 20px 85px;
+    background-color: white;
+    border-style: solid;
+    margin: 20px 0px;
+}
+
+.approve-button {
+    color: #20B944;
+    border-color: #20b944;
+    border-width: 2px 0px 2px 2px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}    
+
+.decline-button {
+    color: #d81616;
+    border-color: #d81616; 
+    border-width: 2px 2px 2px 2px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    }
+
+/* problemen
+- alle uitlijningen links hetzeflde, dus alles uitgelijnd vanaf de linkerborder van user-action
+  kan ik daar een div omheen zetten die een margin heeft naar de container en dan alles in de div direct aan laten sluiten?
+- uitlijnen van het footootje op de onderkant van de menber-status tekst, hoe doe ik dat
+
+*/

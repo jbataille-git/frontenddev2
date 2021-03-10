@@ -1,0 +1,33 @@
+ body {
+     background: lightblue;
+     text-align: center;
+ }
+ 
+ .wrapper {
+     width: 100px;
+     height: 100px;
+ }
+ 
+ img {
+     width: 100px;
+     height: 100px; 
+
+     /* verplaatsen */
+     transform: translateX(200px);   /* 200px naar rechts; negatief is mogelijk, dan wordt het links */
+     transform: translate( 100px, 200px); /* eerst de x, dan de y as */
+
+    /* uitrekken of krimpen */
+     transform: scaleX(3);       /* schalen, drie keer zo breed */
+     transform: scale(3);        /* in x en y as */
+     transform: scale(2, 0.5);   /* 2x in x, 0.5x in y as */
+ 
+     /* roteren om  x-as of y-as */
+     transform: rotateX(60deg);    /* dingetje wordt kleiner, varken aan het spit */
+     /* wordt pas interessant als we om de z-as gaan roteren, dat is dan met de klok mee of tegenin */
+     transform: rotateZ(90deg);    /* kwart slag naar rechts; negatief is tegen klok in */
+    
+     /* combineren; de z-as blijft op zijn plaats! en translateY zal naar RECHTS verplaatsen */
+     /* volgorde doet er toe, transformatie is steeds op resultaat van de vorige */
+     transform: rotateZ(-90deg) translateY(200px) scale(2);
+ }
+ 

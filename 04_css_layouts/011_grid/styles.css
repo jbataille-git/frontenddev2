@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    height: 100%;
+}
+
+html {
+    height: 100%;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100px auto 300px 100px;
+    grid-gap: 5px;
+    /* height: 100%; */  /* hiermee wordt de tweede rij niet responsive */
+    /* height: 99vh;       hiermee wel */
+    height: 100%;    /*   maakt 'm alleen responsive als body en html ook height 100% hebben*/
+    /* border: 5px solid gray;     */
+}
+.site-header {
+    background-color: #51A6F8 ;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 20px;
+}
+.site-main {
+    background-color: #6EBF40 ;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 20px;
+}
+.widget-area {
+    background-color: #B269E2;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 20px;
+}
+.site-footer {
+    background-color: #0163BE;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 20px;
+}
+
+@media screen and (min-width: 1024px) {
+    .grid-container {
+      grid-template-columns: 200px auto;
+      grid-template-rows: auto 300px 100px;
+    }
+    .site-header {
+        grid-row: 1 / -1;
+    }
+  }
+
+  @media screen and (min-width: 1600px) {
+    .grid-container {
+      grid-template-columns: 200px auto 200px;
+      grid-template-rows: auto 100px;
+    }
+    /* is niet nodig omdat die regel al bij 1024 px wordt vastgesteld */
+    /* .site-header {
+        grid-row: 1 / -1;
+    } */
+    .widget-area {
+        grid-column: 3;
+        grid-row: 1 / -1;
+    }
+  }

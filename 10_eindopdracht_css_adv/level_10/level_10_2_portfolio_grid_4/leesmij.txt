@@ -1,0 +1,13 @@
+niet afgemaakt, is veel werk en niet heel zinnig
+
+versie 4
+
+Ik ga proberen om er een kaart uit de testimonial-opdracht in te stoppen.
+Is natuurlijk te doen, de html wordt iets ingewikkelder,
+de css wordt wat onoverzichtelijk, denk ik.
+
+Moet dan twee css'en in elkaar schuiven:
+dat van testimonial 2 en dat van portfolio-grid 3
+
+En de kaart moet dan ook nog in het grid groter en kleiner worden,
+zal even zoeken zijn naar hoe hij in grid staat.

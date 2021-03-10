@@ -1,0 +1,56 @@
+/* before en after, pseudo-element
+:: zijn pseudo-elementen, : zijn pseudo classes
+*/
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 5rem;
+}
+
+/* pseudo-elementen zijn INLINE by default */
+
+/* de before komt na de openings p-tag, vóór de content van de p */
+/*
+p::before {
+    content: '';
+    background: red;
+    display: block;
+    width: 10px;
+    height: 10px;
+}
+*/
+/* hetzelfde voor de after, binnen de p, na de content van de p */
+/*
+p::after {
+    content: '';
+    background: red;
+    display: block;
+    width: 10px;
+    height: 10px;
+}
+*/
+/* bij images werkt het niet, daar werken pseudo-elementen niet */
+
+ /* vervolg  */
+p::before {
+    content: 'hello';
+    color: white;
+    background: red;
+    font-size: 20px;
+    font-weight: 900;
+    display: block;
+}
+
+p::after {
+    content: 'goodbye';
+    color: white;
+    font-size: 20px;
+    font-weight: 900;
+    background: red;
+    display: block;
+}
+
+
+/* handig als design element, minder div's schrijven */

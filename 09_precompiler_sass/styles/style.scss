@@ -1,0 +1,115 @@
+// btje rommelinge instructie; dit zijn de onderwerpen
+// 1 variabelen
+// 2 importeren van andere scss bestand, partials
+// 3 nesten van elementen en properties
+// 4 mixin zonder of met parameters, @include
+// 5 @extend, overnemen van een ander
+
+
+
+
+// 1. een variabele aanmaken en gebruiken
+// moet bovenin gebeuren
+$primary-button:  #c8d147;
+
+header button {
+    background: $primary-button;
+}
+
+.contact button {
+    background: $primary-button;
+}
+
+
+// importeren van een tweede scss
+// die bestandsnaam moet met een underscore beginnen
+// en het pad hoort erbij, anders doet 'ie het niet
+@import "./header";
+// je kunt bijvoorbeeld een scss maken met alle variabelen
+// import moet bovenin het css staan
+// het pad moet erbij
+// wordt bij wijzigingen niet direct opnieuw gelezen, je moet de import opnieuw 'afdwingen'
+
+
+header {
+    background: lightblue;
+    display: flex;
+    justify-content: center;
+}
+
+
+// nesten
+// wordt vertaald naar header button
+// maakt organisatie makkelijker
+header {
+    background: lightblue;
+    display: flex;
+    justify-content: center;
+    button {
+        background: $primary-button;
+        &:hover {
+            background: red;
+        }
+        &::after {
+            content: "Helloooo";
+        }
+    }
+
+}
+
+// een soort functie maken voor een paar dingen in één keer
+// en die kun je dan met @include aanroepen
+@mixin flex-center {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// en daar kan ook een parameter in
+// en dan kun je de mixin met verschillende parameters aanroepen
+@mixin flex-center-p($direction) {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+// en dan zeg je @include flex-center-p(column);
+// kan ook met meerdere parameters
+@mixin flex-center-pp($direction, $background) {
+    flex-direction: $direction;
+    background-color: $background;
+}
+// aanroep: flex-center-pp( column, red);
+
+// nesten
+header {
+    @include flex-center();
+
+    background: lightblue;
+    button {
+        background: $primary-button;
+        &:hover {
+            background: red;
+        }
+        &::after {
+            content: "Helloooo";
+        }
+    }
+
+}
+
+// extensions
+// .contact neemt alles over van header
+// je kunt het ook meteen weer overrulen
+.contact {
+    @extend header;
+    background: lightcoral;
+}
+
+// calculations
+.contact {
+    width: 100% - 20%;
+}

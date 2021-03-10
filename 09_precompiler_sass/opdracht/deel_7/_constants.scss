@@ -1,0 +1,12 @@
+/* een variabele voor de achtergrondkleur; de body heeft zijn eigen achtergrondkleur
+   die wordt hiermee in een paar secties aangepast
+*/
+$base-lightgreen: #97d279;
+$default-padding: 20px;
+
+@mixin text-style {
+  max-width: 700px;
+  text-align: center;
+  color: red;
+}
+

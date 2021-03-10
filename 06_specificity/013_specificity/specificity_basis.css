@@ -1,0 +1,43 @@
+/* specificity_basis.css */
+/*
+- laatste regel wint
+- extrenal style sheet, internal style, inline style; sort of true, sort of follows the cascade
+- de laast gelezene wint
+- VERMIJD INLINE STYLES
+
+*/
+
+/* paragrafen in een div */
+/* div p is meer specifiek en zal daardoor voorrang krijgen, p in div wordt geel */
+div p {
+    color: yellow;
+}
+
+p {
+    color: green;
+}
+
+/* classes are more specific than tags en zullen door voorrang krijgen */
+/* een p in een div met class definition zal zwart worden */
+.definition {
+    color: black;
+}
+
+/* calculator */
+
+/* ID more specific than class 
+maar......
+vermijd ID's omdat ze niet te overriden zijn met een class
+je kunt er dus niks meer mee
+*/
+
+/* important overrides everything */
+/* -- DO NOT USE IT -- */
+/* !important volgt de normale regels: een latere !important gaat voor een eerdere */
+/* en dan kan het heel ingewikkeld worden */
+P {
+    color: green !important;
+}
+
+/* use classes as much as possible, do not use element-selectors */
+/* do not use nested element selectors */

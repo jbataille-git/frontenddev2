@@ -1,0 +1,71 @@
+header button, .contact button {
+  background: #c8d147;
+}
+
+.contact button {
+  background: #c8d147;
+}
+
+header, .contact {
+  background: lightblue;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header button, .contact button {
+  background: #c8d147;
+}
+header button:hover, .contact button:hover {
+  background: red;
+}
+header button::after, .contact button::after {
+  content: "Helloooo";
+}
+
+header, .contact {
+  background: lightblue;
+  display: flex;
+  justify-content: center;
+}
+
+header, .contact {
+  background: lightblue;
+  display: flex;
+  justify-content: center;
+}
+header button, .contact button {
+  background: #c8d147;
+}
+header button:hover, .contact button:hover {
+  background: red;
+}
+header button::after, .contact button::after {
+  content: "Helloooo";
+}
+
+header, .contact {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: lightblue;
+}
+header button, .contact button {
+  background: #c8d147;
+}
+header button:hover, .contact button:hover {
+  background: red;
+}
+header button::after, .contact button::after {
+  content: "Helloooo";
+}
+
+.contact {
+  background: lightcoral;
+}
+
+.contact {
+  width: 80%;
+}
+/*# sourceMappingURL=style.css.map */

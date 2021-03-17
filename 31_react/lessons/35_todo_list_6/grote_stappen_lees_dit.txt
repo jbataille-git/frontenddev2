@@ -1,0 +1,16 @@
+veel stappen in deze les
+
+doorgeven van een eventhandler naar component via props
+
+state kopieeren en wijzigen met array map
+
+een object kopieeren met ... en dan één property wijzigen
+
+of alles wijzigen door te zeggen { todos: updatedTodos}
+ik wist niet dat het kon
+
+
+this
+
+vergeet niet te binden
+

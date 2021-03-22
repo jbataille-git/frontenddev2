@@ -1,0 +1,34 @@
+Voor de eindopdracht level 33 React boodschappenlijst moet je een nieuwe React-
+app maken en dus volgens de opdracht 
+
+Maak een React App met $ npx create-react-
+app [PROJECTNAAM], geef de app de projectnaam my-groceries-app ? volg de stappen 
+nauwkeurig: https://reactjs.org/docs/create-a-new-react-app.html
+
+Dan moet ik dus een nieuwe map maken met een nieuwe React installatie
+en daar heb ik geen zin an.
+
+Dus ik probeer het met ombouwen van mijn huidige react omgeving.
+Daar heb ik nu de map my-app met daarin
+mappen node_modules
+       public
+       src
+
+en de bestanden
+
+package-lock.json
+package.json
+.gitignore
+README.md
+
+Ik denk dat ik het werkend krijg als ik
+
+- de map my-app hernoem naar my-groceries-app
+- in package-lock.json my-app vervang door my-groceries-app
+- in package.json idem
+
+
+
+In de map
+
+

@@ -1,0 +1,23 @@
+<!--  block element modifier  -->
+
+block:             card
+element in card:   card__image       dubbele underscore; geef ieder element in een andere element zijn eigen class;
+                                     nesting is gonna get you in trouble
+modifier van card: card--light;      dubbele afkorting-streepje
+
+<!-- bijvoorbeeld element in card: 
+     afgeleide classes met dubbele underscores
+     iedere element zijn eigen class
+-->
+<div class="card">
+    <img class="card__image" src="" alt="" />
+    <h2  class="card__title">I'm a light card</h2>
+    <p   class="card__body">And here would be the content of my card</p>
+</div>
+
+
+<!-- een div met twee classes, tweede is een modifier van de eerste 
+     dan heb je dus een algemene en een specifieke class
+     Met de algemene kun je alle card's beinvloeden, met de specifieke de bijzondere
+-->
+<div class="card card--light"><div/>

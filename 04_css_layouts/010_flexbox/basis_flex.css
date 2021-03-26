@@ -1,0 +1,29 @@
+/* als je een container op flex zet, maakt die zijn kinderen tot flex-items */
+/* flex maakt rijen OF kolommen, niet allebei tegelijk */
+.container {
+  display:flex;                                                /* hier begint het mee */
+  flex-direction: row | row-reverse | column | column-reverse; /* hoofdas, default  row*/
+  flex-wrap: nowrap | wrap | wrap-reverse;                     /* default nowrap, proberen alles op één rij te krijgen */
+  flex-flow: column wrap;                                      /* shorthand voor direction en wrap, default column nowrap */
+  justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly | start | end | left | right ... + safe | unsafe;
+                                                               /* default flex-start, veiligste (meest ondersteunde) waarden zijn flex-start, flex-end, center */
+                                                               /* safe houdt alle elementen in beeld */
+  align-items: stretch | flex-start | flex-end | center | baseline | first baseline | last baseline | start | end | self-start | self-end + ... safe | unsafe;
+                                                               /* uitlijning op de haakse as van de justify
+                                                                  , dus als justify over horizontaal gaat, gaat align over verticaal */
+  align-content: normal | flex-start | flex-end | center | space-between | space-around | space-evenly | stretch | start | end | baseline | first baseline | last baseline + ... safe | unsafe;
+                                                                /* default normal, dit speelt alleen als er een wrap is
+                                                                   uitlijning in de haakse as van de regels */
+  
+}
+
+.item {
+  order: 5;                       /* plaats in de volgorde, default is 0 */
+  flex-grow: 2;                   /* relatieve grootte, als anderen 1 hebben wordt dit 2 keer zo groot, default 0 */
+  flex-shrink: 3;                 /* omgekeerde van grow denk ik,  default 1 */
+  flex-basis:  | auto;            /* ingewikkeld; default auto */
+  flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ];       /* default 0 1 auto en dat is AANBEVOLEN */
+  align-self: auto | flex-start | flex-end | center | baseline | stretch;  /* als een item een uitzondering mag maken */
+}
+
+/*  !! Note that float, clear and vertical-align have no effect on a flex item. */

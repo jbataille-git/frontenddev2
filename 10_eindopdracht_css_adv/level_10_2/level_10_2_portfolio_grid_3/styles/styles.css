@@ -1,0 +1,95 @@
+body {
+  background-color: #c3cfe2;
+}
+
+.grid-container {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-gap: 30px;
+  padding: 30px;
+  max-width: 100%;
+}
+
+.card {
+  max-height: 600px;
+  max-width: 450px;
+  border-radius: 20px;
+  -webkit-transition-property: background;
+  transition-property: background;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+}
+
+.card__button {
+  position: relative;
+  left: 170px;
+  /* is alleen goed als de card op zijn maximale formaat is, dan staat 'ie in het midden */
+  top: 300px;
+  opacity: 0;
+  border-radius: 5px;
+  height: 2em;
+  font-weight: bold;
+  -webkit-box-shadow: 2px 2px 2px gray;
+          box-shadow: 2px 2px 2px gray;
+}
+
+.card__image {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 20px;
+  opacity: 1;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+}
+
+.card__image:hover {
+  opacity: 0;
+}
+
+.card:hover {
+  background-color: #474747;
+}
+
+.card:hover .card__button {
+  opacity: 1;
+}
+
+/* ------------------------------------------------------------------------------------*/
+/* media-queries
+/* ------------------------------------------------------------------------------------*/
+/* ondergrens van tablets */
+@media screen and (min-width: 768px) {
+  .grid-container {
+    /* grid-template-columns: auto auto; */
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ondergrens van desktops */
+@media screen and (min-width: 1024px) {
+  .grid-container {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/*
+@media screen and (min-width: 1600px) {
+  .grid-container {
+      grid-template-columns: repeat(4, 1fr);
+  }
+}
+*/
+/*# sourceMappingURL=styles.css.map */

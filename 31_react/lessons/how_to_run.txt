@@ -1,0 +1,56 @@
+// starten met npm start in de my-app map
+// in mijn geval D:\data\winc\90_react\my-app
+
+instructie van Niels
+
+https://www.youtube.com/watch?v=W78k-EK0-qA
+
+installeren met npx create-react-app my-app
+cd my-app
+npm start
+
+browser naar localhost:3000
+
+Hoe te bouwen?
+Ga naar my-app.
+Belangrijkste map is src
+Blijf van de map public af
+Je applicatie begin in index.js, daar staat ook ReactDOM.render(....);
+  die de component App gaat renderen in het root-element
+En die component App importeer je met
+  import App from './App';
+  dat is het bestand app.js
+
+In app.js staat een functie
+en die functie wordt onderin het bestand geexporteerd
+
+De return-waarde van de App-functie komt in de pagina te staan, zo werkt het.
+
+Nieuwe component toevoegen:
+maak een nieuw bestand in de map src, bijvoorbeeld voorbeeld.js
+import React from "react"
+
+function Voorbeeld() {           // dit wordt de component
+  return <div>Dit is een voorbeeld</div>;
+}
+export default Voorbeeld;
+
+Dan deze component importeren in App.js
+import Voorbeeld from "./Voorbeeld.js"
+
+En dan de component nog gebruiken in App.js:
+
+function App() {
+  return (
+    <div className="App>
+      Hoi Winc'ers
+      <Voorbeeld />
+    </div>
+  );
+}
+export default App;
+
+
+
+
+

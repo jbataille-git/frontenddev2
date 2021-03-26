@@ -1,0 +1,84 @@
+/*
+Als ik deze gebruik, heb ik de media queries zowat niet meer nodig
+Grid styles -------------------------------------------------
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 30px;
+}
+
+.cards {
+  max-width: 960px;
+  margin: 0 auto 30px;
+}
+
+/* weet nog niet waar dit voor is */
+/*
+article {
+    position: relative;
+}
+*/
+
+body {
+    background-color: lightgray;
+    margin-top: 20px;
+}
+
+/* de main heb ik nodig als flex om de grid-container gecentreed te hebben 
+   of is daar een andere manier voor?
+*/
+main {
+  background-color: #c3cfe2;
+  /* display: flex; */
+  /* justify-content: center; */
+}
+
+.grid-container {
+    display: grid;
+    /* grid-template-columns: 1fr; */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 30px;
+    padding: 30px;
+    /* max-width: 1320px; */
+}
+
+.card__image {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 20px;
+}
+
+/*
+transition of keyframes
+zet opacity van 1 naar 0
+zet visibility van hidden naar visible
+*/
+
+/* ------------------------------------------------------------------------------------*/
+/* media-queries                                                                       */
+/* ------------------------------------------------------------------------------------*/
+
+/* ondergrens van tablets */
+/* @media screen and (min-width: 768px) {
+  .grid-container {
+      grid-template-columns: 1fr 1fr;
+  }
+}
+*/
+
+/* ondergrens van desktops */
+/* 
+@media screen and (min-width: 1024px) {
+  .grid-container {
+      grid-template-columns: repeat( 3, 1fr);
+  }
+}
+*/
+
+/*
+@media screen and (min-width: 1600px) {
+  .grid-container {
+      grid-template-columns: repeat(4, 1fr);
+  }
+}
+*/

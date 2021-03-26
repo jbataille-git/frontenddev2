@@ -1,0 +1,36 @@
+/* na het lezen van de oplossing doe ik het nog eens over
+   met name om flex beter te begrijpen
+   De rest had ik wel redelijk in orde, flex vond ik het moeilijkste   
+*/
+
+* {
+    margin: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+main {
+    display: flex;
+}
+
+.card {
+    border-color: #dddddd;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 2px #eeeeee;
+  
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}

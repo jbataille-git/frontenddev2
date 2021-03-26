@@ -1,0 +1,16 @@
+// you ve made it
+
+// core concepts
+// jsx wrapper on js
+// function comp en class comp
+//   if you need state of lifecycle methods, use class comp
+// style
+//   className
+//   styleObject
+
+// props
+// state
+// conditional rendering
+// forms
+
+// rebrand.ly/reactbootcamp

@@ -1,0 +1,81 @@
+/*
+1.  In oplossing 1 had ik display: block nodig voor de foto, om die in het midden te krijgen
+     samen met margin-left en margin-right op auto
+    Hier hoeft dat ineens niet meer, de foto gaat naar het midden
+     als ik text-align van het omsluitende blok op center zet.
+    Waarom is dat zo?
+*/
+
+@import  "./constants";
+
+body {
+    background-color: #c3cfe2;
+    margin: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+
+}
+
+.card__main {
+    height: 375px;
+    width: $default-width;
+    background-color: white;
+    margin: 20px 20px 0px 20px;
+    border-top-left-radius: $default-border-radius;
+    border-top-right-radius: $default-border-radius;
+    box-shadow: $box-shadow;
+
+    &__text {
+    padding: 40px 40px 20px 40px;
+    line-height: 1.8em;
+    font-size: 1.3em;
+    }
+}
+
+.shift_up_container {
+    position: relative;
+    // top: -70px;
+    top: -(($image-size / 2) + 5px)
+}
+
+.card__footer {
+    background-color: #686de0;
+    width: $default_width;
+    height: 200px;
+    margin: 0px 20px 0px 20px;
+    border-bottom-left-radius: $default-border-radius;
+    border-bottom-right-radius: $default-border-radius;
+    text-align: center;
+    box-shadow:  $box-shadow;
+
+    &__image {
+    width: $image-size;
+    height: $image-size;
+    border: 6px solid white;
+    border-radius: ($image-size / 2) + 5px;
+    }
+
+    &__name {
+    text-transform: uppercase;
+    color: white;
+    font-weight: 500;
+    font-size: 1.4em;
+    padding: 20px 0px 20px 0px;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: #a1a7f1;
+    font-size: 1.3em;
+    transition-property: color;
+    transition-duration: 300ms;
+
+    &:hover {
+        color: white;
+    }
+}
+
+
+

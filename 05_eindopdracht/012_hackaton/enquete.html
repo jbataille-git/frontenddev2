@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+ <html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Enquete - Natscheren voor beginners</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="grid-container">
+    <header class="site-header">
+      <!-- <h2>.site-header</h2> -->
+      <nav class="nav-container">
+        <div><a href="index.html">home</a></div>
+        <div><a href="index.html#mes">mes</a></div>
+        <div><a href="index.html#kwast">kwast</a></div>
+        <div><a href="das.html">das</a></div>
+        <div><a href="index.html#zeep">zeep</a></div>
+        <div><a href="index.html#irritatie">irritatie</a></div>
+        <div><a href="enquete.html">enquete</a></div>
+        <div><a href="https://www.youtube.com/results?search_query=natscheren" target="_blank">youtube</a></div>
+      </nav> 
+    </header>
+    <article class="site-main">
+      <header>
+        <h2>Waar sta jij?</h2>
+      </header>
+      <form name="scheerenquete" method="POST" data-netlify="true">
+        <!-- Volledige naam -->
+        <p>
+          <label for="naam" class="tekstlabel">Volledige naam:</label>
+          <input type="text" id="naam" name="naam" size="50" maxlength="50" required
+            placeholder="hier uw naam, verplicht veld, max. 50 tekens" />
+        </p>
+        <!-- Emailadres -->
+        <p>
+          <label for="emailveld" class="tekstlabel">Emailadres:</label>
+          <input type="email" id="emailveld" name="emailveld" size="50" maxlength="50" required
+            placeholder="hier uw emailadres, verplicht veld, max. 50 tekens" />
+        </p>
+        <!-- Telefoonnummer -->
+        <p>
+          <label for="telnummer" class="tekstlabel">Telefoonnummer:</label>
+          <input type="tel" id="telnummer" name="telnummer" size="20" maxlength="20" required
+            placeholder="telefoonnummer, verplicht" />
+        </p>
+        <!-- Leeftijd -->
+        <p>
+          <label for="leeftijd" class="tekstlabel">Leeftijd:</label>
+          <input type="number" id="leeftijd" min="10" max="100" value="25" />
+        </p>
+        <!-- Geboortedatum -->
+        <p>
+          <label for="geboortedatum" class="tekstlabel">Geboortedatum:</label>
+          <input type="date" id="geboortedatum" min="1920-01-01" max="2020-01-01" value="1995-01-01" />
+        </p>
+        <!-- Geslacht
+             de validator zegt dat onderstaande code niet kan omdat de 'for' van de labels naar een id moeten verwijzen
+             maar Netlify snapt dat niet
+             Die werkt met de name in zijn rapport van de form submission
+        -->
+         <p>
+          <label class="tekstlabel">Geslacht: </label>
+          <!-- hoe krijg ik die drie knopjes verticaal uitgelijnd op een rijtje? -->
+
+          <!-- <input type="radio" id="man" name="geslacht" value="man"/> -->
+          <input type="radio" name="geslacht" value="man" checked/>
+          <label for="man">man</label>
+
+          <!-- <input type="radio" id="vrouw" name="geslacht" value="vrouw"/> -->
+          <input type="radio" name="geslacht" value="vrouw" />
+          <label for="vrouw" >vrouw</label>
+                
+          <!-- <input type="radio" id="anders" name="geslacht" value="anders" /> -->
+          <input type="radio" name="geslacht" value="anders" />
+          <label for="anders">anders</label>
+        </p>
+
+        <!-- checkbox dassenhaar -->
+        <p>
+          <label for="dassenhaar" class="tekstlabel">Dassenhaar-ervaring:</label>
+          <input type="checkbox" id="dassenhaar" name="dassenhaar" />
+        </p>
+
+        <!-- kleurkiezer haarkleur -->
+        <p>
+          <label for="haarkleur" class="tekstlabel">Haarkleur:</label>
+          <input type="color" id="haarkleur" name="haarkleur" />
+        </p>
+
+        <!-- natscheerneiging slider-->
+        <p>
+          <label for="neiging" class="tekstlabel">Natscheerneiging (0 - 100):</label>
+          0
+          <input type="range" id="neiging" name="neiging" min="1" max="100" value="75"/>
+          100
+        </p>
+
+        <!-- selectietlijst  haarlocatie, als selectlist-->
+        <p>
+          <label for="selectlocatie" class="tekstlabel">Welk haar moet weg:</label>
+          <select name="selectlocatie" id="selectlocatie">
+            <option value="snorhaar">snorhaar</option>
+            <option value="baardhaar" selected>baardhaar</option>
+            <option value="schaamhaar">schaamhaar</option>
+            <option value="borsthaar">borsthaar</option>
+            <option value="okselhaar">okselhaar</option>
+          </select>
+        </p>
+
+        <!-- multiline textitem -->
+        <p>
+          <label for="ervaringen" class="tekstlabel">Ervaringen:</label>
+          <textarea rows="10" cols="80" name="ervaringen" id="ervaringen">
+            ..hier je scheerervaringen, nat of droog...
+          </textarea>
+        </p>
+        <br>
+        <br>
+        <!-- knoppen voor submit en reset -->
+        <p>
+          <!-- <label for="submitknop" class="tekstlabel">Indienen</label> -->
+          <button type="submit" value="Submit" id="submitknop" name="submitknop">Indienen</button>
+
+          <!-- <label for="resetknop" class="tekstlabel">Scherm leegmaken</label> -->
+          <button type="reset" value="Scherm leeg" id="resetknop" name="resetknop">Leegmaken</button>
+        </p>
+      </form>
+    </article>
+    <footer class="site-footer">
+      <h2>.site-footer</h2>
+    </footer>
+  
+  </main>
+</body>
+ </html>

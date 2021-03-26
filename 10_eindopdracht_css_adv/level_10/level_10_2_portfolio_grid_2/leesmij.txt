@@ -1,0 +1,10 @@
+versie 2
+media-queries verwijderd en iets slims in grid-template-columns gezet
+met autofill en minmx
+
+werkt als een trein maar bij het groter worden van het browservenster
+komen er meer dan drie kolommen. Dat zit in de autofill: er komt een kolom bij als er ruimte iets
+
+Is weinig code schrijven maar doet niet precies wat de bedoeling is.
+
+Deze versie niet inleveren.

@@ -1,0 +1,8 @@
+versie 1
+
+beetje ingewikkelde structuur op touw moeten zetten met twee achtergrond-vlakken
+om de foto op de juiste plek te krijgen
+
+werkt wel, maar ik vind het een beetje rommeling
+
+heb hier geen sass gebruikt, dat heb ik in versie 2 wel gedaan

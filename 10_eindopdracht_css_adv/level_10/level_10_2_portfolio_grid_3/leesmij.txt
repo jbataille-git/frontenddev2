@@ -1,0 +1,12 @@
+versie 3
+
+Ik krijg het niet helemaal voor elkaar
+De button is het grootste probleem, hoe kan ik die laten verschijnen?
+
+En de transition heeft een schoonheidsfoutje in de overgang
+
+In de animatie van Niels Bom zit nog een ander effect dat ik niet voor elkaar krijg:
+bij een hover wordt de foto iets groter, die keert naar zijn oorspronkelijk grootte terug, denk ik.
+Hoe ik dat moet doen weet ik ook niet, zal iets te maken hebben met zijn grid.
+
+Heb een paar vragen in styles.scss gezet.

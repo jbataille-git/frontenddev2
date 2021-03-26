@@ -12,18 +12,18 @@ let ikRock = () => {
 // Deel A
 let ikRock = () => console.log("Joe, ik rock de arrow functions");
 
+// Deel B
 const fivePlusSeven = function () {
   return 5 + 7;
 };
 
 fivePlusSeven();
 
-// als de functie-body niet op q regel kan, heb je een return statement nodig
+// als de functie-body niet op 1 regel kan, heb je een return statement nodig
 let fivePlusSeven3 = () => {
   return 5 + 7;
 };
 
-// Deel B
 // hier een impliciet return-statement
 let fivePlusSeven2 = () => 5 + 7;
 
@@ -37,3 +37,5 @@ let addFive = c => c + 5;
 let createObject = () => ({greeting: "hoi"});
 
 createObject();
+
+// en hier een wijziging om met github te oefenen

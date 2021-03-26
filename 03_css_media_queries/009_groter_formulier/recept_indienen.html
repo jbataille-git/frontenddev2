@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Recept indienen</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="navigatie-ul">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Meer</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="recept_indienen.html">Recept indienen</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form name="receptformulier" method="POST" data-netlify="true">
+            <p>
+                Vul de lijst hieronder in om uw recept aan ons voor te stellen
+            </p>
+            <br>
+            <!-- Volledige naam -->
+            <p>
+                <label for="naam" class="tekstlabel">Volledige naam:</label>
+                <input type="text" id="naam" name="naam" size="50" maxlength="50" required placeholder="hier uw naam, verplicht veld, max. 50 tekens"/>
+            </p>
+            <!-- Emailadres -->
+            <p>
+                <label for="emailveld" class="tekstlabel">Emailadres:</label>
+                <input type="email" id="emailveld" name="emailveld"  size="50" maxlength="50" required placeholder="hier uw emailadres, verplicht veld, max. 50 tekens"/>
+            </p>
+            <!-- Telefoonnummer -->
+            <p>
+                <label for="telnummer" class="tekstlabel">Telefoonnummer:</label>
+                <input type="tel" id="telnummer" name="telnummer" size="20" maxlength="20" required placeholder="hier uw telefoonnummer, verplicht veld" />
+            </p>
+            <!-- Leeftijd -->
+            <p>
+                <label for="leeftijd" class="tekstlabel">Leeftijd:</label>
+                <input type="number" id="leeftijd" min="10" max="100" value="25" />
+            </p>
+            <!-- Geboortedatum -->
+            <p>
+                <label for="geboortedatum" class="tekstlabel">Geboortedatum:</label>
+                <input type="date" id="geboortedatum" min="1920-01-01" max="2020-01-01" value="1995-01-01"/>
+            </p>
+            <!-- Geslacht
+                 de validator zegt dat onderstaande code niet kan omdat de 'for' van de labels naar een id moeten verwijzen
+                 maar Netlify snapt dat niet
+                 Die werkt met de name in zijn rapport van de form submission
+            -->
+            <p>
+                <label class="tekstlabel">Geslacht: </label>
+
+                <!-- <input type="radio" id="vrouw" name="geslacht" value="vrouw"/> -->
+                <input type="radio" name="geslacht" value="vrouw"/>
+                <label for="vrouw" class="tekstlabel">vrouw</label>
+
+                <!-- <input type="radio" id="man" name="geslacht" value="man"/> -->
+                <input type="radio" name="geslacht" value="man"/>
+                <label for="man" class="tekstlabel">man</label>
+
+                <!-- <input type="radio" id="anders" name="geslacht" value="anders" /> -->
+                <input type="radio" name="geslacht" value="anders" />
+                <label for="anders" class="tekstlabel">anders</label>
+            </p>
+            <!-- Favoriete keuken als ul -->
+            <!-- <p> -->
+            <!--
+                <label class="tekstlabel">Favoriete keuken(s):</label>
+                <ul style="list-style-type: none;">
+                    <li><input type="checkbox" id="frans" name="frans" value="Frans"><label for="frans">Frans</label></li>
+                    <li><input type="checkbox" id="italiaans" name="italiaans" value="italiaans"><label for="italiaans">Italiaans</label></li>
+                    <li><input type="checkbox" id="spaans" name="spaans" value="spaans"><label for="spaans">Spaans</label></li>
+                    <li><input type="checkbox" id="arabisch" name="arabisch" value="arabisch"><label for="arabisch">Arabisch</label></li>
+                </ul>
+            -->
+            <!-- </p> -->
+            <!-- Favoriete keuken inline -->
+            <p>
+                <label class="tekstlabel">Favoriete keuken(s):</label>
+                <input type="checkbox" id="frans2" name="frans2" value="frans"><label for="frans2">Frans</label>
+                <input type="checkbox" id="italiaans2" name="italiaans2" value="italiaans"><label for="italiaans2">Italiaans</label>
+                <input type="checkbox" id="spaans2" name="spaans2" value="spaans"><label for="spaans2">Spaans</label>
+                <input type="checkbox" id="arabisch2" name="arabisch2" value="arabisch"><label for="arabisch2">Arabisch</label>
+            </p>
+            <!-- Kleur van short -->
+            <p>
+                <label for="favcolor" class="tekstlabel">Favoriete kleur:</label>
+                <input type="color" id="favcolor" name="favcolor"/>
+            </p>
+            <!-- korte bio -->
+            <p>
+                <label for="bio" class="tekstlabel">Korte biografie:</label>
+                <textarea id="bio" name="bio" cols="80" rows="20" placeholder="hier een korte biografie, maximaal 1000 tekens" maxlength="1000"></textarea>
+            </p>
+            <!-- file upload -->
+            <p>
+                <label for="file_upload" class="tekstlabel">Laatste recept:</label>
+                <input type="file" id="file_upload" name="file_upload"/>
+            </p>
+           <!-- url -->
+            <p>
+                <label for="website" class="tekstlabel">Website:</label>
+                <input type="url" id="website" name="website" size="80" placeholder="http://www. ......"/>
+            </p>   
+            <br>
+            <br>
+            <!-- knoppen voor submit en reset -->
+            <p>
+                <label for="submitknop" class="tekstlabel">Indienen</label>
+                <button type="submit" value="Submit" id="submitknop" name="submitknop">Indienen</button>
+            </p>
+            <p>
+                <label for="resetknop" class="tekstlabel">Scherm leegmaken</label>
+                <button type="reset" value="Scherm leeg" id="resetknop" name="resetknop">Leegmaken</button>
+            </p>
+            </form>
+    </main>
+    <footer>
+        Zoeken met <a href="http://www.google.nl">Google</a>
+    </footer>
+</body>
+
+</html>

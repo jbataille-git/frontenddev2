@@ -1,0 +1,128 @@
+/* -------------------------------------------------------------------------------
+ADVANCED CSS SELECTORS
+------------------------------------------------------------------------------- */
+ /* universal selector
+ selects everything except ::before and ::after */
+ * {
+     background: red;
+ }
+
+ /* alles in een class */
+.universal * {
+     background: red;
+ }
+
+ /* soort van reset bovenaan: */
+ *, *::before, *::after {
+     box-sizing: border-box;  /* rekenen met buitenmaten, ipv content-box */
+     margin-top: 0;
+ }
+
+ /* direct-child */
+ .direct-children > p {
+     color: red;
+ }
+
+ /* alle p's die binnen de class children zitten. dat is het verschil */
+ .children p {
+     color: blue;
+ }
+
+ /* adjacent sibling, wat ligt er direct vóór me? */
+ /* iets van een class box in de class adjacent-sibling vraagt: ligt er een class box direct voor me?
+    dan word ik rood. Anders niet */
+ .adjacent-sibling .box + .box {
+     background: red;
+ }
+ /* zou makkelijk zijn als je margins in moet stellen, zegt de spreker */
+
+ /* general-sibling, ligt er ergens voor me een box, dan wordt ik rood */
+ .general-sibling .box ~ .box {
+     background: red;
+ }
+
+ /* attribute selectors, selecteren op grond van attribuut */
+ /* een link met een target, bijvoorbeeld */
+ [target] {
+     color: darkblue;
+ }
+
+ /* of */
+a [target] {
+     color: darkblue;
+ }
+a[href] {
+    color: red;
+}
+a[href="about.html"] {     /* exacte match tussen "" */
+    color: red;
+}
+a[class|="link"] {         /* naam van class moet met het woord link beginnen en 'link' moet er als apart roowr instaan */
+    color: purple;       /* werkt dus alleen als er afbreektekens oid. in de tekst staan  */
+}
+a[href^="http"] {           /* starts with */
+    color: orange;
+}
+a[href*="google"] {         /* de tekst 'google' moet er ergens instaan */
+    color: black;
+}
+a[href$=".ca"] {            /* zoekt tekst op het eind */
+    color: blue;
+}
+a[class~="logo"] {          /* <a> elements whose class attribute contains the word "logo" */
+  padding: 2px;
+}
+
+a[href*="insensitive" i] {  /* Links with "insensitive" anywhere in the URL, regardless of capitalization */
+  color: cyan;            /* voor case-sensitive vergelijken: s in plaats van i */
+}
+
+/* voorbeeld */
+a[target="_blank"] ::after {
+    content: ' (external link)';
+}
+
+a[target="_blank"] ::after {
+    content: url('//unsplash.it/20/20');
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 25px;
+}
+
+ /* vaak gebruikt in forms voor input velden */
+
+/* voorbeelden */
+
+/* All divs with a `lang` attribute are bold. */
+div[lang] {
+  font-weight: bold;
+}
+
+/* All divs without a `lang` attribute are italicized. */
+div:not([lang]) {
+  font-style: italic;
+}
+
+/* All divs in US English are blue. */
+div[lang~="en-us"] {
+  color: blue;
+}
+
+/* All divs in Portuguese are green. */
+div[lang="pt"] {
+  color: green;
+}
+
+/* All divs in Chinese are red, whether
+   simplified (zh-CN) or traditional (zh-TW). */
+div[lang|="zh"] {
+  color: red;
+}
+
+/* All divs with a Traditional Chinese
+   `data-lang` are purple. */
+/* Note: You could also use hyphenated attributes
+   without double quotes */
+div[data-lang="zh-TW"] {
+  color: purple;
+}

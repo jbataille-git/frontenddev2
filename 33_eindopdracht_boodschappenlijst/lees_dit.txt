@@ -27,8 +27,40 @@ Ik denk dat ik het werkend krijg als ik
 - in package-lock.json my-app vervang door my-groceries-app
 - in package.json idem
 
+Ja, dat werkt.
+
+Stap 4:
+nog wat commentaar hier en daar, het was ingewikkeld.
+Eventhandlers in props twee niveau's omhoog, en dan nog parameters doorgeven.
+Voor de duidelijkheid en het begrip het ik namen van functies aangepast, met volgnummers 1, 2 
+
+state manipuleren op oude en nieuwe manier
+
+Stap 5:
+input field toegevoegd
+een idCounter in state, is leuk, weet niet of docent dat goed gaat vinden.
+Ik laat 'm staan, dat zien we dan wel.
+
+Alles werkt, alleen de teller voor de hoeveelheid moet er nog in
+en nog styling
+
+Stap 6:
+alle commentaar laten staan zodat ik het later nog snap
 
 
-In de map
+Stap 7:
+nog niet de inleverversie
+volledig werkend en gestyled
+maar de logica is niet volgens voorschrift dus dat pas ik nog aan
+- niet meer uitvragen waar de onClick vandaan komt, dat kan maar op één plek zijn
+- aparte functies voor toevoegen aan cart en updaten van amount, volgens spec
 
 
+-- 
+voor de redux les doe ik iets soortgelijks
+- hernoem de map my-groceries-app naar learn-redux, net als in de video
+- dan weer package-lock.json aanpassen
+- en package.json aanpassen
+- dan op de goeie plek gaan staan, dat is map 90_react\learn-redux
+- (in de map 90_react ging het niet goed, foutmeldingen en een nieuwe package-lock.json een niveau hoger)
+- en dan nog npm install redux react-redux

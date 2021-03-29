@@ -4,7 +4,6 @@ function SongForm(props) {
 
   return (
     <div>
-      {/* <h2>Ik ben het songform</h2> */}
       <table className="song-form-table">
         <tbody>
         <tr>
@@ -20,7 +19,7 @@ function SongForm(props) {
           <td><input
             className="new-song-item"
             type="text"
-            maxLength="50"
+            maxLength="60"
             name="song" 
             placeholder="fill in the song's name"
             value={props.stateData.song}
@@ -70,32 +69,3 @@ function SongForm(props) {
 }
 
 export default SongForm;
-
-// render() {
-//       return (
-//           <div>
-//               <form>
-//                 <input
-//                   name="firstName"            /* zorg dat de name gelijk is aan de object-property name in state*/
-//                   value={this.state.firstName}
-//                   type="text"
-//                   placeholder="First name"
-//                   onChange={this.handleChange}
-//                 />
-
-//                 <input
-//                   name="lastName"             /* zorg dat de name gelijk is aan de object-property name in state*/
-//                   value={this.state.lastName}
-//                   type="text"
-//                   placeholder="Last name"
-//                   onChange={this.handleChange}
-//                 />
-
-//               <h1>
-//                 {this.state.firstName} {this.state.lastName}
-//               </h1>
-//               </form>
-//           </div>
-//       )
-//   }
-// }

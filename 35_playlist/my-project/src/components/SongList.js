@@ -10,13 +10,8 @@ function SongList(props) {
     backgroundColor: "white"
   }
 
-
   const orderedListOfSongs = [ ...props.stateData.songsArray ]
   
-  if (props.sortReverse) {
-    sortStyle.backgroundImage = "linear-gradient(#555, white)"
-  }
-
   if (props.sortColumn === "rating") {
     orderedListOfSongs.sort( (a, b) => parseInt(a.rating) - parseInt(b.rating))
   } else {
@@ -24,6 +19,7 @@ function SongList(props) {
   }
 
   if (props.sortReverse) {
+    sortStyle.backgroundImage = "linear-gradient(#555, white)"
     orderedListOfSongs.reverse();
   }
 

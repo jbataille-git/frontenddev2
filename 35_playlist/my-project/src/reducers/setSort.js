@@ -1,9 +1,4 @@
-const sortReducer = ( state, action) => {
-
-  const initialState = {
-    field: "song",
-    reverse: false
-  }
+const sortReducer = ( state = { field: "song", reverse: false }, action) => {
 
   let newState = { ...state}
 
@@ -26,7 +21,7 @@ const sortReducer = ( state, action) => {
     return newState;
   }
 
-  return initialState;
+  return newState;
 
 }
 

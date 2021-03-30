@@ -19,7 +19,10 @@ div/
 33_eindopdracht_boodschappenlijst/stap_7
 33_eindopdracht_boodschappenlijst/lees_dit.txt
 34_state_management/1_versie
-35_playlist
+35_playlist/versie_1
+35_playlist/versie_2
+35_playlist/versie_3
+89_tussen
 90_react/
-
+.gitignore
 node_modules

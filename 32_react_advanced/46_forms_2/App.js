@@ -59,7 +59,7 @@ class App extends Component {
       <div>
         <form onSubmit={this.handleSubmit}>
           <input
-"            name="firstName" /* zorg dat de name gelijk is aan de object-property name in state*/
+            name="firstName" /* zorg dat de name gelijk is aan de object-property name in state*/
             value={this.state.firstName}
             type="text"
             placeholder="First name"

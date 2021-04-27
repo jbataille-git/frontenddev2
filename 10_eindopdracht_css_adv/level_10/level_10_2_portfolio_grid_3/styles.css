@@ -22,9 +22,7 @@ main {
 }
 
 .grid-container {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
   grid-gap: 30px;
   padding: 30px;
@@ -84,14 +82,12 @@ main {
 @media screen and (min-width: 768px) {
   .grid-container {
     /* grid-template-columns: auto auto; */
-    -ms-grid-columns: 1fr 30px 1fr;
     grid-template-columns: 1fr 1fr;
   }
 }
 /* ondergrens van desktops */
 @media screen and (min-width: 1024px) {
   .grid-container {
-    -ms-grid-columns: 1fr 30px 1fr 30px 1fr;
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -101,5 +97,4 @@ main {
       grid-template-columns: repeat(4, 1fr);
   }
 }
-*/
-/*# sourceMappingURL=styles.css.map */
+*//*# sourceMappingURL=styles.css.map */

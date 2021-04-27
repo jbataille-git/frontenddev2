@@ -228,8 +228,7 @@ input {
   position: relative;
   padding-bottom: 33.25%;
   overflow: hidden;
-  -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   flex: 2 0 55%;
   margin: 1.4em 0;
 }
@@ -292,5 +291,4 @@ input {
 
 .copy-wrapper {
   padding-left: 20px;
-}
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */

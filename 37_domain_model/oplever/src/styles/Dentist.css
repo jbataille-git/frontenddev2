@@ -1,0 +1,30 @@
+.dentistview .dentists-table {
+  border-spacing: 0px;
+}
+
+.dentistview .new-dentist-header-title {
+  background-color: deepskyblue;
+  font-weight: bold;
+  font-size: 1.3rem;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.dentistview .new-dentist-header th {
+  background-color: aquamarine;
+  font-weight: bold;
+  padding: 10px;
+  text-align: left;
+}
+
+.dentistview td {
+  background-color: lightyellow;
+  height: 2rem;
+  padding: 10px;
+}
+
+.new-dentist-item {
+  background-color: white;
+  border: none;
+  font-size: 1rem;
+}

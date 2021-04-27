@@ -1,0 +1,106 @@
+.appointmentview {
+  width: 1300px;
+}
+.appointmentview .new-appointment-form {
+  margin-bottom: 40px;
+}
+
+.appointmentview .new-appointment-form-title {
+  width: 1000px;
+  background-color: deepskyblue;
+}
+
+.appointmentview h2 {
+  font-size: 1.3rem;
+  padding: 10px;
+}
+
+.appointmentview span {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 200px;
+  background-color: aquamarine;
+  font-weight: bold;
+  line-height: 1.2rem;
+  padding: 10px;
+}
+
+.appointmentview .select-div {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 200px;
+  background-color: lightyellow;
+  height: 40px;
+}
+
+.appointmentview .new-appointment-form select {
+  display: inline-block;
+  width: 80%;
+  margin: 10px;
+  border: none;
+}
+
+.appointmentview .add-button-div {
+  width: 1000px;
+  box-sizing: border-box;
+  background-color: lightyellow;
+  height: 40px;
+  padding: 10px;
+}
+
+.appointmentview .appointments-ul {
+  list-style: none;
+}
+
+.appointmentview .appointments-ul-title {
+  width: 1300px;
+  background-color: deepskyblue;
+}
+
+
+.appointment-li .day,
+.appointment-li .time,
+.appointment-li .patient,
+.appointment-li .dentist,
+.appointment-li .assistant,
+.appointment-li .delete-button-div {
+  /* border: 1px solid gray; */
+  display: inline-block;
+  padding: 0.5rem;
+  width: 50px;
+}
+
+.appointment-li .patient,
+.appointment-li .dentist,
+.appointment-li .assistant,
+.appointment-li .delete-button-div {
+  width: 180px;
+}
+
+.appointments-ul .move-button-div {
+  display: inline-block;
+}
+
+.appointments-ul li:nth-child(even) {
+  background-color: rgb(255, 255, 204);
+}
+
+.appointments-ul li:nth-child(odd) {
+  background-color: lightyellow;
+}
+
+.appointments-ul label {
+  display: inline-block;
+  width: 30px;
+  padding: 5px;
+}
+
+.appointments-ul select {
+  display: inline-block;
+  width: 60px;
+  margin: 10px;
+}
+
+#moveToDayLabel, #moveToTimeLabel, #moveToButton {
+  color: darkred;
+}

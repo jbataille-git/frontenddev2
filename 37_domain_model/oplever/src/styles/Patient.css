@@ -1,0 +1,37 @@
+.patientview .patients-table {
+  border-spacing: 0px;
+}
+
+
+.patientview .new-patient-header-title {
+  background-color: deepskyblue;
+  font-weight: bold;
+  font-size: 1.3rem;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.patientview .new-patient-header th {
+  background-color: aquamarine;
+  font-weight: bold;
+  padding: 10px;
+  text-align: left;
+}
+
+.patientview td {
+  background-color: lightyellow;
+  height: 2rem;
+  padding: 10px;
+}
+
+.patientview .new-patient-item {
+  background-color: white;
+  border: none;
+  font-size: 1rem;
+}
+/*
+.patientview tr:nth-child(even) {
+    background-color: #f2f2f2;
+    color: blue;
+}
+*/

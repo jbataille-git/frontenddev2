@@ -13,7 +13,7 @@ import { Provider } from 'react-redux'
 const myStore = createStore(
   allReducers,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-  );
+);
 
 // import * as serviceWorker from "./serviceWorker.js"
 

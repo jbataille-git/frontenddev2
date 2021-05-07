@@ -1,0 +1,106 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.container-header {
+  background-color: #222;
+  color: white;
+  height: 6em;
+  padding-top: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+li {
+  padding-left: 10px;
+  line-height: 2em;
+}
+
+button {
+  width: 150px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.clear-button-container {
+  text-align: center;
+}
+
+/* --------------------------------------------------------------------------- */
+.grocery-list {
+  width: 44vw;
+  float: left;
+  margin-top: 30px;
+}
+
+.input-field-container {
+  text-align: center;
+}
+
+.input-field {
+  height: 25px;
+  width: 150px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.grocery-list-item {
+  background-color: #e18582;
+  margin: 5px;
+}
+
+.grocery-list-item:hover {
+  cursor: pointer;
+}
+
+/* .grocery-list-item:nth-of-type(even) { */
+.grocery-list-item:nth-child(even) {
+  background-color: #f2b7c1;
+}
+/* --------------------------------------------------------------------------- */
+.cart-list {
+  width: 44vw;
+  float: right;
+  margin-top: 30px;
+}
+
+.cart-list-item {
+  background-color: #b5d6e3;
+  margin: 5px;
+}
+
+.cart-list-item:nth-of-type(even) {
+  background-color: #e4fcfd;
+}
+
+.cart-list-item:hover {
+  cursor: pointer;
+}
+
+.cart-list-item-amount {
+  float: right;
+  margin-right: 10px;
+}

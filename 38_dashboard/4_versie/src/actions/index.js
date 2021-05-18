@@ -5,6 +5,13 @@ export const selectOne = (name) => {
   }
 };
 
+export const selectSingle = (name) => {
+  return {
+    type: 'SELECT_SINGLE',
+    payload: name
+  }
+};
+
 export const selectAll = () => {
   return {
     type: 'SELECT_ALL'
@@ -26,5 +33,11 @@ export const selectDif = () => {
 export const selectJoy = () => {
   return {
     type: 'SELECT_JOY'
+  };
+};
+
+export const initButtons = () => {
+  return {
+    type: 'INIT_BUTTONS'
   };
 };

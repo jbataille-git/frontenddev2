@@ -15,6 +15,8 @@ const selectButtonsReducer = ( state = initialState, action) => {
       return { ...state, dif: !state.dif};
     case "SELECT_JOY":
       return { ...state, joy: !state.joy};
+    case "INIT_BUTTONS":
+      return initialState;
     default:
       return state;
     }

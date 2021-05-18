@@ -1,8 +1,28 @@
-1.
-eerste grafiek staat erin
-wil een aparte component maken voor de knoppen,
-die staan nu nog in twee verschillende componenten
-vandaar deze tussen-opslag
+1.  eerste grafiek staat erin
+    wil een aparte component maken voor de knoppen,
+    die staan nu nog in twee verschillende componenten
+    vandaar deze tussen-opslag
+
+2
+
+3 ingeleverd maar afgekeurd omdat de React Router er niet in staat
+Dus ik ga een versie 4 maken en inleveren
+
+4 Commentaar van Ben Linnebank:
+React router moet erin
+Hier en daar let vervangen door const, dat gaat ook bij een array(push) goed
+  maar niet bij een reassignment
+Hier en daar op Ctrl + s gedrukt om de formatter aan te roepen, dan ziet het er beter uit.
+Snap ik allemaal.
+
+Nog een bug hersteld in graphContainter.js, als je moeilijkheid of plezier deselecteerde, was er een foutmelding in de console.
+De grafiek kon niet met 'null' overweg, dat moest een rij nullen worden.
+
+Moest toch wel een en ander verbouwen en het ziet er wat primitief uit.
+Kon wel mooi de componenten verplaatsen, dat werkte heel mooi.
+
+  <!--  -->
+
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
